@@ -30,7 +30,7 @@ db.createCollection( Restaurant,
    {
         id
         name
-        location -- (seat)
+        location -- (seat - place)
 
         
    }
@@ -52,6 +52,7 @@ db.createCollection( Command,
         flat_id
         -- restaurant_id
         command_date
+        delivery_place
         is_deliver
    }
 )
