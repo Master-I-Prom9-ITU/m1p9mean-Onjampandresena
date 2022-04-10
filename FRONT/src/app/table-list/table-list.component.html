@@ -12,131 +12,73 @@
                           <table class="table">
                               <thead class=" text-primary">
                                   <th>
-                                      ID
+                                      Nom
                                   </th>
                                   <th>
-                                      Name
+                                      Description
                                   </th>
                                   <th>
-                                      Country
+                                      Categorie
                                   </th>
                                   <th>
-                                      City
+                                      Image
                                   </th>
                                   <th>
-                                      Salary
+                                      Prix
+                                  </th>
+                                  <th>
+                                      Restaurant
+                                  </th>
+                                  <th>
+                                    Actions
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr>
+
+                                  <tr *ngFor="let plat of plats">
                                       <td>
-                                          1
+                                        {{plat.Nom}}
                                       </td>
                                       <td>
-                                          Dakota Rice
+                                        {{plat.Description}}
                                       </td>
                                       <td>
-                                          Niger
+                                        {{plat.Categorie}}
                                       </td>
                                       <td>
-                                          Oud-Turnhout
+                                        {{plat.Image}}
+                                      </td>
+                                      <td>
+                                        {{plat.Prix}}
                                       </td>
                                       <td class="text-primary">
-                                          $36,738
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
-                                      </td>
-                                      <td>
-                                          Minerva Hooper
-                                      </td>
-                                      <td>
-                                          Curaçao
-                                      </td>
-                                      <td>
-                                          Sinaai-Waas
+                                        {{plat.Restaurant}}
                                       </td>
                                       <td class="text-primary">
-                                          $23,789
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-3">
+                                                <a class="nav-link" [routerLink]="" (click)="modify_plat(plat._id)">
+                                                    <i class="material-icons">update</i>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="nav-link" [routerLink]="" (click)="delete_plat(plat._id)">
+                                                    <i class="material-icons">delete</i>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3"></div>
+                                        </div>
                                       </td>
                                   </tr>
-                                  <tr>
-                                      <td>
-                                          3
-                                      </td>
-                                      <td>
-                                          Sage Rodriguez
-                                      </td>
-                                      <td>
-                                          Netherlands
-                                      </td>
-                                      <td>
-                                          Baileux
-                                      </td>
-                                      <td class="text-primary">
-                                          $56,142
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          4
-                                      </td>
-                                      <td>
-                                          Philip Chaney
-                                      </td>
-                                      <td>
-                                          Korea, South
-                                      </td>
-                                      <td>
-                                          Overland Park
-                                      </td>
-                                      <td class="text-primary">
-                                          $38,735
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          5
-                                      </td>
-                                      <td>
-                                          Doris Greene
-                                      </td>
-                                      <td>
-                                          Malawi
-                                      </td>
-                                      <td>
-                                          Feldkirchen in Kärnten
-                                      </td>
-                                      <td class="text-primary">
-                                          $63,542
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          6
-                                      </td>
-                                      <td>
-                                          Mason Porter
-                                      </td>
-                                      <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          Gloucester
-                                      </td>
-                                      <td class="text-primary">
-                                          $78,615
-                                      </td>
-                                  </tr>
+
                               </tbody>
                           </table>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-md-12">
+          <!-- <div class="col-md-12">
               <div class="card card-plain">
                   <div class="card-header card-header-danger">
                       <h4 class="card-title mt-0"> Table on Plain Background</h4>
@@ -270,7 +212,7 @@
                       </div>
                   </div>
               </div>
-          </div>
+          </div> -->
       </div>
   </div>
 </div>
