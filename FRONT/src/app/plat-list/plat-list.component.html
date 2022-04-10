@@ -1,14 +1,14 @@
 <div class="main-content">
   <div class="container-fluid">
-      <div class="row" *ngFor="let plat of plats" >
+      <div class="row" *ngFor="let a_plat of plat_list" >
           <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                   <div class="card-header card-header-warning card-header-icon">
                       <div class="card-icon">
                         <img src="/assets/images/logo.jfif" style="width: 40px;" />
                       </div>
-                      <p class="card-category">{{plat.Nom}}</p>
-                      <h3 class="card-title">{{plat.Prix}}
+                      <p class="card-category">{{a_plat.Nom}}</p>
+                      <h3 class="card-title">{{a_plat.Prix}}
                           <small>Ar</small>
                       </h3>
                   </div>

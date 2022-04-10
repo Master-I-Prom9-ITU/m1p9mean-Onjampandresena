@@ -18,7 +18,6 @@ export class TableListComponent implements OnInit {
     this.loadData();
   }
   loadData(){
-    console.log(base_url);
     let data:Observable<any>;
     data = this.http.get(base_url+'plat');
     data.subscribe(result => { 
@@ -31,6 +30,7 @@ export class TableListComponent implements OnInit {
 
     const success = response => {
       console.log('DELETE SUCCESS');
+      this.route.navigate(["/admin/e_kaly/table-list"]);
     }
 
     const error = response => {
@@ -40,10 +40,8 @@ export class TableListComponent implements OnInit {
     try {
       this.http.delete(base_url+'plat/'+_id).subscribe(success, error);
     } catch (err) { 
-      console.log('catch');
     } finally{
-      console.log('finally');
-      this.route.navigate(["/admin/e_kaly/table-list"]);
+      
     }
 
   }
@@ -53,36 +51,6 @@ export class TableListComponent implements OnInit {
 
   ngOnInit() {
     
-    // this.plats = [
-    //   { Nom: 'Katsaka', Description: 'Sakafo malagasy',  Categorie: 'Gouté', Image: '',  Prix: 3000, Restaurant: 'E-Sakafo' },
-    //   { Nom: 'Katsaka 1', Description: 'Sakafo malagasy',  Categorie: 'Gouté', Image: '',  Prix: 3000, Restaurant: 'E-Sakafo' },
-    //   { Nom: 'Katsaka 2', Description: 'Sakafo malagasy',  Categorie: 'Gouté', Image: '',  Prix: 3000, Restaurant: 'E-Sakafo' },
-    // ];
   }
 
 }
-
-
-// tsconfig
-
-// {
-//   "compileOnSave": false,
-//   "compilerOptions": {
-//     "outDir": "./dist/out-tsc",
-//     "baseUrl": "src",
-//     "sourceMap": true,
-//     "declaration": false,
-//     "module": "es2020",
-//     "moduleResolution": "node",
-//     "emitDecoratorMetadata": true,
-//     "experimentalDecorators": true,
-//     "target": "es5",
-//     "typeRoots": [
-//       "node_modules/@types"
-//     ],
-//     "lib": [
-//       "es2017",
-//       "dom"
-//     ]
-//   }
-// }
