@@ -5,7 +5,8 @@ var commandeSchema = new mongoose.Schema({
     Restaurant : String,
     Plat : String,
     Nombre : Number,
-    DateCommande : Date
+    DateCommande : Date,
+    Status : String
 });
 
 const Commande = mongoose.model('Commande', commandeSchema);
