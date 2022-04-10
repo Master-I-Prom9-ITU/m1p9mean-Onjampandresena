@@ -23,7 +23,7 @@ export class PlatListComponent implements OnInit {
     data.subscribe(result => { 
       this.plat_list = result.data;
       this.test = 'TEST';
-      console.log(this.plat_list[0].Categorie);
+      console.log(this.plat_list);
     });
   }
   ngOnInit() {

@@ -16,11 +16,16 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 const routes: Routes =[
   {
     path: '',
-    children: [ {
-      path: '',
-      component: InscriptionClientComponent
-      }]
-  },
+    redirectTo: 'admin/e_kaly/dashboard',
+    pathMatch: 'full',
+  }, 
+  // {
+  //   path: '',
+  //   children: [ {
+  //     path: '',
+  //     component: InscriptionClientComponent
+  //     }]
+  // },
   {
       path: 'client',
       children: [ {
